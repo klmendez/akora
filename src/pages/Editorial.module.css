@@ -1,0 +1,25 @@
+.page { background: var(--color-ivory); color: var(--color-blue); padding: 155px 0 90px; }
+.intro { max-width: 850px; margin-bottom: 64px; }
+.intro h1 { font-size: clamp(2.3rem, 5vw, 4.2rem); letter-spacing: -.05em; line-height: 1.1; }
+.intro p { max-width: 650px; margin-top: 26px; color: #526170; font-size: 1.05rem; line-height: 1.9; }
+.actions { display: flex; flex-wrap: wrap; gap: 20px; align-items: center; margin-top: 30px; }
+.textLink { display: inline-block; padding: 10px 0; border-bottom: 1px solid #bc8b49; font-weight: 600; font-size: .86rem; }
+.list { border-top: 1px solid #c7cbd0; }
+.row { display: grid; grid-template-columns: 70px 1fr 1fr; gap: 35px; padding: 42px 0; border-bottom: 1px solid #c7cbd0; align-items: start; }
+.number { color: #95672f; font-size: .8rem; letter-spacing: .12em; }
+.row h2 { margin-top: 12px; font-size: clamp(1.5rem, 2.5vw, 2.2rem); letter-spacing: -.035em; }
+.row p { color: #526170; line-height: 1.9; }
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: 65px; padding: 60px 0; border-top: 1px solid #c7cbd0; }
+.split h2 { font-size: clamp(1.7rem, 3vw, 2.5rem); letter-spacing: -.03em; margin-bottom: 24px; }
+.split p { color: #526170; line-height: 1.9; margin-bottom: 20px; }
+.deliverables li { padding: 18px 0; border-bottom: 1px solid #d5d7da; color: #526170; }
+.example { display: grid; grid-template-columns: 1.2fr 1fr; gap: 60px; align-items: center; padding: 40px 0; }
+.example img { width: 100%; aspect-ratio: 1.4; object-fit: cover; object-position: top; }
+.example h2 { margin-bottom: 20px; font-size: 2rem; }
+.example p { color: #526170; line-height: 1.9; }
+.secondary { padding-top: 50px; border-top: 1px solid #c7cbd0; margin-top: 50px; }
+.secondary p { max-width: 700px; color: #526170; margin: 18px 0; }
+.secondary summary { cursor: pointer; padding: 15px 0; font-weight: 600; }
+@media(max-width: 700px) { .page { padding-top: 135px; } .intro { margin-bottom: 42px; } .row { grid-template-columns: 30px 1fr; gap: 18px; padding: 32px 0; } .row > div:last-child { grid-column: 2; } .split, .example { grid-template-columns: 1fr; gap: 30px; } .split { padding: 40px 0; } }
+
+.serviceLabel { margin-top: 35px; }

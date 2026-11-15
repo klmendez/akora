@@ -1,0 +1,124 @@
+.hero {
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  padding: 120px 0 64px;
+  overflow: hidden;
+  background: var(--color-white);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(420px, 1.1fr);
+  align-items: center;
+  gap: clamp(48px, 7vw, 100px);
+}
+
+.copy {
+  max-width: 540px;
+}
+
+.copy h1 {
+  color: var(--color-blue);
+  font-size: clamp(2.6rem, 5vw, 4.7rem);
+  line-height: 1.03;
+}
+
+.copy p {
+  max-width: 48ch;
+  margin-top: 24px;
+  color: rgba(10, 34, 60, 0.72);
+  font-size: 1.04rem;
+}
+
+.exploreLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 34px;
+  padding: 12px 16px;
+  border: 1px solid var(--color-blue);
+  background: var(--color-blue);
+  color: var(--color-white);
+  font-size: 0.86rem;
+  font-weight: 600;
+  transition: background var(--transition-fast), color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.exploreLink:hover {
+  background: var(--color-white);
+  color: var(--color-blue);
+  transform: translateX(6px);
+}
+
+.showcase {
+  position: relative;
+  min-height: 430px;
+}
+
+.shot {
+  position: absolute;
+  margin: 0;
+  border: 1px solid rgba(10, 34, 60, 0.18);
+  box-shadow: 0 20px 46px rgba(0, 8, 18, 0.16);
+  overflow: hidden;
+}
+
+.shot img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: var(--color-white);
+}
+
+.mainShot {
+  inset: 32px 0 0 20%;
+  aspect-ratio: 16 / 9;
+}
+
+.topShot {
+  top: 0;
+  left: 0;
+  width: 42%;
+  aspect-ratio: 16 / 9;
+}
+
+.bottomShot {
+  right: 4%;
+  bottom: 0;
+  width: 38%;
+  aspect-ratio: 16 / 9;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    min-height: auto;
+    padding: 116px 0 72px;
+  }
+
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .showcase {
+    max-width: 640px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 116px 0 56px;
+  }
+
+  .copy h1 {
+    font-size: 2.55rem;
+  }
+
+  .showcase {
+    min-height: 250px;
+  }
+}

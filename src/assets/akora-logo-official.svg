@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" role="img" aria-labelledby="title desc">
+  <title id="title">AKORA 212 Digital Lab</title>
+  <desc id="desc">Monograma AK y nombre AKORA 212 en azul marino y dorado</desc>
+  <g fill="none" stroke="#06182c" stroke-width="18" stroke-linecap="square" stroke-linejoin="miter">
+    <path d="M248 292 438 66v226"/>
+    <path d="m520 178 132-112M520 178l116 114"/>
+  </g>
+  <path d="M340 214h91v15H327z" fill="#bc8b49"/>
+  <text x="415" y="405" fill="#06182c" text-anchor="middle" font-family="Montserrat, Poppins, Arial, sans-serif" font-size="76" font-weight="300" letter-spacing="22">AKORA</text>
+  <text x="714" y="405" fill="#bc8b49" text-anchor="middle" font-family="Montserrat, Poppins, Arial, sans-serif" font-size="76" font-weight="300" letter-spacing="14">212</text>
+  <text x="450" y="486" fill="#06182c" text-anchor="middle" font-family="Montserrat, Poppins, Arial, sans-serif" font-size="31" font-weight="300" letter-spacing="24">DIGITAL LAB</text>
+</svg>

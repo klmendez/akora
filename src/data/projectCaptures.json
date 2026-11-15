@@ -1,0 +1,300 @@
+{
+  "501": [
+    {
+      "src": "/projects/501/desktop-inicio.jpg",
+      "device": "desktop",
+      "label": "Inicio",
+      "width": 1440,
+      "height": 960
+    },
+    {
+      "src": "/projects/501/desktop-detalle.jpg",
+      "device": "desktop",
+      "label": "Colección y marcas",
+      "width": 1440,
+      "height": 960
+    },
+    {
+      "src": "/projects/501/mobile-inicio.jpg",
+      "device": "mobile",
+      "label": "Inicio",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "src": "/projects/501/mobile-detalle.jpg",
+      "device": "mobile",
+      "label": "Colección y marcas",
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "barrios-valencia": [
+    {
+      "src": "/projects/barrios-valencia/desktop-inicio.jpg",
+      "device": "desktop",
+      "label": "Inicio",
+      "width": 1440,
+      "height": 960
+    },
+    {
+      "src": "/projects/barrios-valencia/desktop-detalle.jpg",
+      "device": "desktop",
+      "label": "Por qué elegirnos",
+      "width": 1440,
+      "height": 960
+    },
+    {
+      "src": "/projects/barrios-valencia/mobile-inicio.jpg",
+      "device": "mobile",
+      "label": "Inicio",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "src": "/projects/barrios-valencia/mobile-detalle.jpg",
+      "device": "mobile",
+      "label": "Por qué elegirnos",
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "etnodesarrollo-guapi": [
+    {
+      "src": "/projects/etnodesarrollo-guapi/desktop-inicio.jpg",
+      "device": "desktop",
+      "label": "Inicio",
+      "width": 1440,
+      "height": 960
+    },
+    {
+      "src": "/projects/etnodesarrollo-guapi/desktop-detalle.jpg",
+      "device": "desktop",
+      "label": "Conocer los planes",
+      "width": 1440,
+      "height": 960
+    },
+    {
+      "src": "/projects/etnodesarrollo-guapi/mobile-inicio.jpg",
+      "device": "mobile",
+      "label": "Inicio",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "src": "/projects/etnodesarrollo-guapi/mobile-detalle.jpg",
+      "device": "mobile",
+      "label": "Conocer los planes",
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "alixson-valentina": [
+    {
+      "src": "/projects/alixson-valentina/desktop-inicio.jpg",
+      "device": "desktop",
+      "label": "Inicio",
+      "width": 1440,
+      "height": 960
+    },
+    {
+      "src": "/projects/alixson-valentina/desktop-detalle.jpg",
+      "device": "desktop",
+      "label": "Portafolio",
+      "width": 1440,
+      "height": 960
+    },
+    {
+      "src": "/projects/alixson-valentina/mobile-inicio.jpg",
+      "device": "mobile",
+      "label": "Inicio",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "src": "/projects/alixson-valentina/mobile-detalle.jpg",
+      "device": "mobile",
+      "label": "Portafolio",
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "abp-seguros": [
+    {
+      "src": "/projects/abp-seguros/desktop-inicio.jpg",
+      "device": "desktop",
+      "label": "Inicio",
+      "width": 1440,
+      "height": 960
+    },
+    {
+      "src": "/projects/abp-seguros/desktop-detalle.jpg",
+      "device": "desktop",
+      "label": "Seguros y servicios",
+      "width": 1440,
+      "height": 960
+    },
+    {
+      "src": "/projects/abp-seguros/mobile-inicio.jpg",
+      "device": "mobile",
+      "label": "Inicio",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "src": "/projects/abp-seguros/mobile-detalle.jpg",
+      "device": "mobile",
+      "label": "Seguros y servicios",
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "la-temporada": [
+    {
+      "src": "/projects/la-temporada/desktop-inicio.jpg",
+      "device": "desktop",
+      "label": "Inicio",
+      "width": 1440,
+      "height": 960
+    },
+    {
+      "src": "/projects/la-temporada/desktop-detalle.jpg",
+      "device": "desktop",
+      "label": "Productos destacados",
+      "width": 1440,
+      "height": 960
+    },
+    {
+      "src": "/projects/la-temporada/mobile-inicio.jpg",
+      "device": "mobile",
+      "label": "Inicio",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "src": "/projects/la-temporada/mobile-detalle.jpg",
+      "device": "mobile",
+      "label": "Productos destacados",
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "la-tuba": [
+    {
+      "src": "/projects/la-tuba/desktop-inicio.jpg",
+      "device": "desktop",
+      "label": "Inicio",
+      "width": 1440,
+      "height": 960
+    },
+    {
+      "src": "/projects/la-tuba/desktop-detalle.jpg",
+      "device": "desktop",
+      "label": "Nuestra carta",
+      "width": 1440,
+      "height": 960
+    },
+    {
+      "src": "/projects/la-tuba/mobile-inicio.jpg",
+      "device": "mobile",
+      "label": "Inicio",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "src": "/projects/la-tuba/mobile-detalle.jpg",
+      "device": "mobile",
+      "label": "Nuestra carta",
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "mr-o": [
+    {
+      "src": "/projects/mr-o/desktop-inicio.jpg",
+      "device": "desktop",
+      "label": "Inicio",
+      "width": 1440,
+      "height": 960
+    },
+    {
+      "src": "/projects/mr-o/desktop-detalle.jpg",
+      "device": "desktop",
+      "label": "Programas y clases",
+      "width": 1440,
+      "height": 960
+    },
+    {
+      "src": "/projects/mr-o/mobile-inicio.jpg",
+      "device": "mobile",
+      "label": "Inicio",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "src": "/projects/mr-o/mobile-detalle.jpg",
+      "device": "mobile",
+      "label": "Programas y clases",
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "abp-gestion": [
+    {
+      "src": "/projects/abp-gestion/desktop-inicio.jpg",
+      "device": "desktop",
+      "label": "Acceso de clientes",
+      "width": 1440,
+      "height": 960
+    },
+    {
+      "src": "/projects/abp-gestion/mobile-inicio.jpg",
+      "device": "mobile",
+      "label": "Acceso de clientes",
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "rio-guajui": [
+    {
+      "src": "/projects/rio-guajui/desktop-inicio.jpg",
+      "device": "desktop",
+      "label": "Inicio",
+      "width": 1440,
+      "height": 960
+    },
+    {
+      "src": "/projects/rio-guajui/desktop-detalle.jpg",
+      "device": "desktop",
+      "label": "El Consejo",
+      "width": 1440,
+      "height": 960
+    },
+    {
+      "src": "/projects/rio-guajui/mobile-inicio.jpg",
+      "device": "mobile",
+      "label": "Inicio",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "src": "/projects/rio-guajui/mobile-detalle.jpg",
+      "device": "mobile",
+      "label": "El Consejo",
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "aygomez": [
+    {
+      "src": "/projects/aygomez/identidad.png",
+      "device": "brand",
+      "label": "Identidad principal"
+    },
+    {
+      "src": "/projects/aygomez/variante.png",
+      "device": "brand",
+      "label": "Variante de color"
+    }
+  ]
+}
