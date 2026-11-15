@@ -18,3 +18,20 @@
 .faq h2 { font-size: 2.3rem; letter-spacing: -.04em; }
 .faq details { border-bottom: 1px solid #c7cbd0; } .faq summary { padding: 20px 0; cursor: pointer; font-weight: 500; } .faq p { color: #526170; padding: 0 0 24px; line-height: 1.9; font-size: .9rem; }
 @media(max-width: 760px) { .pricing { padding-top: 135px; } .grid, .faq { grid-template-columns: 1fr; gap: 25px; } .plan, .plan:first-child, .plan:last-child { padding: 25px 0; border-right: 0; border-bottom: 1px solid #a9b1b9; } .custom { display: block; } .custom a { margin-top: 25px; } .custom .link { margin-top: 20px; } }
+
+@media (max-width: 900px) {
+ .pricing { padding: 100px 0 32px; } .intro { margin-bottom: 24px; }
+ .intro h1 { font-size: 2rem; } .intro p { font-size: .9rem; margin-top: 14px; line-height: 1.65; }
+ .plan, .plan:first-child, .plan:last-child { border: 0; padding: 22px 0; }
+ .plan h2 { font-size: 1.35rem; margin: 16px 0 10px; }
+ .plan p { font-size: .85rem; min-height: 0; }
+ .price { margin: 20px 0 10px; font-size: 2rem; }
+ .plan ul { margin-bottom: 12px; } .plan li { font-size: .82rem; }
+ .plan .link { margin-top: 14px; min-height: 44px; }
+ .custom { padding: 24px 0; } .custom h2 { font-size: 1.25rem; }
+ .custom p { display: none; } .custom a, .custom .link { margin-top: 14px; }
+ .faq { margin-top: 16px; padding-top: 24px; gap: 18px; }
+ .faq h2 { font-size: 1.5rem; } .faq > div { min-width: 0; }
+ .faq summary { font-size: .88rem; min-height: 64px; padding: 12px 0; }
+ .faq p { font-size: .85rem; line-height: 1.7; }
+}

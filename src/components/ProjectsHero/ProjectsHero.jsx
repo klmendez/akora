@@ -1,3 +1,4 @@
+import ResponsiveText from '../ResponsiveText'
 
 import alixsonImg from '../../assets/projects/alixson-valentina.png'
 import barriosValenciaImg from '../../assets/projects/barrios-valencia.png'
@@ -11,7 +12,7 @@ function ProjectsHero() {
       <div className="container">
         <div className={styles.layout}>
           <Reveal className={styles.copy}>
-            <h1>Proyectos que hacen avanzar a una marca.</h1>
+            <h1><ResponsiveText short="Ideas hechas realidad.">Proyectos que hacen avanzar a una marca.</ResponsiveText></h1>
             <p>
               Cada sitio nace para resolver una necesidad concreta: vender, conectar,
               informar o hacer que una marca tenga una presencia que se siente propia.

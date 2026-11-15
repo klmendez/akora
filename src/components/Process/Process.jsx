@@ -1,3 +1,4 @@
+import ResponsiveText from '../ResponsiveText'
 import Reveal from '../Reveal/Reveal'
 import styles from './Process.module.css'
 
@@ -16,14 +17,14 @@ function Process() {
         <div className="section-head center">
           <Reveal>
             <span className="eyebrow">Cómo trabajamos</span>
-            <h1 className="section-title">De la primera conversación a la entrega.</h1>
+            <h1 className="section-title"><ResponsiveText short="De la idea a la entrega.">De la primera conversación a la entrega.</ResponsiveText></h1>
             <p className="section-lead">
               Un método claro para que sepas exactamente qué esperar en cada etapa de tu proyecto.
             </p>
           </Reveal>
         </div>
 
-        <div className={styles.list}>
+        <p className="mobile-rail-hint">Desliza para conocer las cinco etapas</p><div className={`${styles.list} mobile-rail`} tabIndex={0} role="region" aria-label="Proceso de trabajo">
           {STEPS.map((step, index) => (
             <Reveal key={step.number} delay={index * 60}>
               <div className={styles.step}>

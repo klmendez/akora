@@ -81,3 +81,14 @@
   .summary a { font-size: .76rem; gap: 8px; }
   .row { grid-template-columns: repeat(5, minmax(235px, 1fr)); }
 }
+
+@media (max-width: 900px) {
+ .section { padding: 30px 0; } .intro { gap: 12px; margin-bottom: 18px; }
+ .intro h2 { font-size: 1.6rem; } .eyebrow { margin-bottom: 10px; }
+ .summary p { display: none; } .summary a { margin-top: 0; min-height: 44px; }
+ .row { grid-template-columns: repeat(5, minmax(210px, 1fr)); padding-top: 18px; }
+ .service { padding: 0 18px; } .serviceTop { margin-bottom: 16px; }
+ .service p { margin: 10px 0 14px; line-height: 1.6; font-size: .85rem; }
+ .service ul { display: none; } .service h3 a { display: inline-flex; min-height: 44px; align-items: center; }
+ .scrollHint { margin-bottom: 10px; }
+}

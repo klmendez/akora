@@ -6,3 +6,5 @@
 
 - Evitar flechas decorativas y caracteres que puedan convertirse en emojis. Usar texto en controles de navegación e iconos SVG para los demás símbolos.
 - Equipo confirmado: Karen Mendez y Angiee Argote; ambas ingenieras informáticas egresadas de la Institución Universitaria Colegio Mayor del Cauca.
+
+- En móvil: textos breves, tamaños y espacios compactos, colecciones en una sola fila deslizable y detalles ampliables. Mantener legibilidad y controles táctiles cómodos.

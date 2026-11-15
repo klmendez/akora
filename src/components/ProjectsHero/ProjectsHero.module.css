@@ -122,3 +122,11 @@
     min-height: 250px;
   }
 }
+
+@media (max-width: 900px) {
+ .hero { padding: 100px 0 28px; min-height: 0; }
+ .layout { gap: 22px; } .copy h1 { font-size: 2rem; line-height: 1.12; }
+ .copy p { display: none; } .exploreLink { margin-top: 18px; min-height: 44px; font-size: .8rem; }
+ .showcase { min-height: 160px; max-width: 420px; }
+ .mainShot { inset: 20px 0 0 20%; } .bottomShot { width: 34%; }
+}

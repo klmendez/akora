@@ -18,3 +18,16 @@
 .plan a { width: 100%; text-align: center; white-space: normal; padding: 14px; background: #d9b47f; border-color: #d9b47f; color: var(--color-blue); }
 .note { font-size: .77rem; color: #4d5c6b; margin-top: 16px; }
 @media (max-width: 760px) { .layout { grid-template-columns: minmax(0, 1fr); } }
+
+@media (max-width: 900px) {
+ .section { padding: 28px 0; } .layout { gap: 22px; }
+ .copy h2 { font-size: 1.6rem; margin-bottom: 12px; }
+ .copy > p { font-size: .88rem; line-height: 1.6; }
+ .brands { flex-wrap: nowrap; gap: 16px; overflow-x: auto; margin-top: 18px; padding-bottom: 8px; }
+ .brands > span { display: none; } .brands strong { flex-shrink: 0; font-size: .78rem; }
+ .plan { border-left: 0; border-top: 1px solid #bc8b49; padding: 20px 0 0; }
+ .price { margin-top: 12px; font-size: 2rem; } .quantity { font-size: .88rem; margin: 8px 0 14px; }
+ .label { font-size: .78rem; } .plan li { font-size: .84rem; }
+ .plan ul { margin-bottom: 10px; } .plan a { margin-top: 14px; padding: 12px; }
+ .note { margin-top: 0; font-size: .82rem; line-height: 1.65; }
+}

@@ -157,7 +157,7 @@ function Projects() {
           ))}
         </div>
 
-        <div className={styles.grid}>
+        <p className="mobile-rail-hint">Desliza para ver más proyectos. Toca una captura para ampliarla.</p><div key={active} className={`${styles.grid} mobile-rail`} tabIndex={0} role="region" aria-label="Proyectos de AKORA">
           {filtered.map((project, index) => (
             <Reveal key={project.id} delay={(index % 2) * 80}>
               <article id={project.id} className={styles.projectRow} aria-label={project.title}>
@@ -167,8 +167,8 @@ function Projects() {
                   <div className={styles.body}>
                     <span className={styles.category}>{project.category}</span>
                     <h3 className={styles.title}>{project.title}</h3>
-                    <p className={styles.desc}>{project.desc}</p>
-                    <ul className={styles.features} aria-label={`Funcionalidades de ${project.title}`}>
+                    <p className={`${styles.desc} desktop-only`}>{project.desc}</p>
+                    <ul className={`${styles.features} desktop-only`} aria-label={`Funcionalidades de ${project.title}`}>
                       {project.features.map((feature) => (
                         <li key={feature}>
                           <Check size={15} strokeWidth={2.4} aria-hidden="true" />
@@ -176,7 +176,7 @@ function Projects() {
                         </li>
                       ))}
                     </ul>
-                    <div className={styles.tags}>
+                    <div className={`${styles.tags} desktop-only`}>
                       {project.tags.map((tag) => (
                         <span key={tag}>{tag}</span>
                       ))}

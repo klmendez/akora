@@ -31,7 +31,7 @@ function SocialWork() {
           <span className={styles.eyebrow}>Nuestro trabajo en redes</span>
           <h2 id="social-work-title">Historias reales.<br />Marcas con voz propia<span>.</span></h2>
           <p>Conoce algunas de las piezas que hemos creado. Contenido para acercar las marcas a las personas y mostrar lo que hace especial a cada negocio.</p>
-          <div className={styles.selector} aria-label="Elige una publicación">
+          <div className={`${styles.selector} mobile-rail`} aria-label="Elige una publicación">
             {POSTS.map((item, index) => (
               <button type="button" key={item.id} onClick={() => setActive(index)} aria-pressed={active === index} aria-controls="social-post-viewer">
                 <span className={styles.number}>0{index + 1}</span>

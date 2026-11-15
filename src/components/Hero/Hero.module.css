@@ -193,3 +193,17 @@
 }
 
 .disciplines { margin-top: 32px; font-size: .7rem; letter-spacing: .14em; color: #77603f; }
+
+.titleGold { display: block; }
+@media (max-width: 900px) {
+ .hero { padding: 90px 0 30px; min-height: 0; }
+ .grid { gap: 18px; } .visual { margin: 0; }
+ .logoImg { max-width: 130px; animation: none; }
+ .visual::before { width: 140px; height: 140px; }
+ .visual::after { width: 105px; height: 105px; }
+ .title { min-height: 0; font-size: clamp(1.8rem, 7.5vw, 2.25rem); line-height: 1.12; }
+ .lead { margin-top: 14px; font-size: .9rem; line-height: 1.6; }
+ .actions { margin-top: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+ .actions :global(.btn) { padding: 10px 8px; font-size: .78rem; }
+ .disciplines { display: none; } .copy :global(.eyebrow) { display: none; }
+}

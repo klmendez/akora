@@ -1,3 +1,5 @@
+import ResponsiveText from '../ResponsiveText'
+import MobileDetails from '../MobileDetails'
 import { Link } from 'react-router-dom'
 import styles from './Pricing.module.css'
 const PLANS = [
@@ -15,10 +17,10 @@ const QUESTIONS = [
 ]
 export default function Pricing() {
  return <section className={styles.pricing}><div className="container">
-  <div className={styles.intro}><span className="eyebrow">Planes e inversión</span><h1>Una inversión digital pensada para crecer contigo.</h1><p>Elige un punto de partida. Definimos contigo el alcance y el valor final antes de comenzar.</p></div>
-  <div className={styles.grid}>{PLANS.map((plan,i) => <article className={styles.plan} key={plan.name}><span className={styles.number}>0{i+1} / DESARROLLO WEB</span><h2>{plan.name}</h2><p>{plan.fit}</p><div className={styles.price}><small>Desde</small>${plan.price}<small>COP / proyecto</small></div><ul>{plan.features.map(f => <li key={f}>{f}</li>)}</ul><Link className={styles.link} to={`/contacto?servicio=Una%20p%C3%A1gina%20web&plan=${encodeURIComponent(plan.name)}`}>Consultar este plan</Link></article>)}</div>
+  <div className={styles.intro}><span className="eyebrow">Planes e inversión</span><h1><ResponsiveText short="Planes para tu siguiente paso.">Una inversión digital pensada para crecer contigo.</ResponsiveText></h1><p>Elige un punto de partida. Definimos contigo el alcance y el valor final antes de comenzar.</p></div>
+  <p className="mobile-rail-hint">Desliza para comparar los tres planes</p><div className={`${styles.grid} mobile-rail`} tabIndex={0} role="region" aria-label="Planes de desarrollo web">{PLANS.map((plan,i) => <article className={styles.plan} key={plan.name}><span className={styles.number}>0{i+1} / DESARROLLO WEB</span><h2>{plan.name}</h2><p>{plan.fit}</p><div className={styles.price}><small>Desde</small>${plan.price}<small>COP / proyecto</small></div><MobileDetails summary="Qué incluye"><ul>{plan.features.map(f => <li key={f}>{f}</li>)}</ul></MobileDetails><Link className={styles.link} to={`/contacto?servicio=Una%20p%C3%A1gina%20web&plan=${encodeURIComponent(plan.name)}`}>Consultar este plan</Link></article>)}</div>
   <div className={styles.custom}><div><span className="eyebrow">A tu medida</span><h2>Software, automatización e identidad</h2><p>Cotizamos según los procesos, integraciones y piezas que necesita tu negocio.</p></div><Link className="btn btn-gold" to="/contacto">Definamos tu proyecto</Link></div>
   <div className={styles.custom}><div><span className="eyebrow">Tu marca en movimiento</span><h2>¿Buscas contenido para redes?</h2><p>Conoce el plan de impulso, sus entregables y ejemplos de nuestro trabajo.</p></div><Link className={styles.link} to="/servicios/contenido-digital#impulso-redes">Explorar el plan de contenido</Link></div>
-  <div className={styles.faq}><h2>Antes de empezar,<br />todo claro.</h2><div>{QUESTIONS.map(([q,a]) => <details key={q}><summary>{q}</summary><p>{a}</p></details>)}</div></div>
+  <div className={styles.faq}><h2>Antes de empezar,<br />todo claro.</h2><div><p className="mobile-rail-hint">Desliza para consultar las preguntas</p><div className="mobile-rail" tabIndex={0} role="region" aria-label="Preguntas sobre los planes">{QUESTIONS.map(([q,a]) => <details key={q}><summary>{q}</summary><p>{a}</p></details>)}</div></div></div>
  </div></section>
 }

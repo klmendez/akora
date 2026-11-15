@@ -1,3 +1,4 @@
+import ResponsiveText from '../ResponsiveText'
 import { SERVICES } from '../../data/services'
 import { Blocks, Braces, Compass, Workflow, Camera } from 'lucide-react'
 import { Link } from 'react-router-dom'
@@ -31,7 +32,7 @@ function ServicesOverview() {
                   {(() => { const Icon = ICONS[index]; return <Icon size={28} strokeWidth={1.3} aria-hidden="true" /> })()}
                 </div>
                 <h3><Link to={`/servicios/${service.slug}`}>{service.title}</Link></h3>
-                <p>{service.text}</p>
+                <p><ResponsiveText short={service.short}>{service.text}</ResponsiveText></p>
                 <ul aria-label={`Soluciones de ${service.title}`}>
                   {service.details.map(detail => <li key={detail}>{detail}</li>)}
                 </ul>

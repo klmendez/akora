@@ -87,7 +87,7 @@ function Home() {
             <p className={styles.copy}>Un camino claro, colaborativo y enfocado en lo que realmente importa: tu crecimiento.</p>
             <Link className={styles.textLink} to="/proceso">Conoce nuestro proceso</Link>
           </Reveal>
-          <div className={styles.steps}>
+          <div><p className="mobile-rail-hint">Desliza para conocer las etapas</p><div className={`${styles.steps} mobile-rail`} tabIndex={0} role="region" aria-label="Etapas de trabajo">
             {STEPS.map((step, index) => (
               <Reveal key={step.title} delay={index * 70}>
                 <article className={styles.step}>
@@ -98,7 +98,7 @@ function Home() {
                 </article>
               </Reveal>
             ))}
-          </div>
+          </div></div>
         </div>
       </section>
 

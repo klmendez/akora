@@ -94,3 +94,10 @@
     gap: 24px;
   }
 }
+
+@media (max-width: 900px) {
+ .footer { padding: 20px 0 16px; } .columns, .tagline { display: none; }
+ .top { padding-bottom: 12px; } .logoImg { height: 42px; margin: 0; }
+ .bottom { gap: 10px; padding-top: 12px; font-size: .7rem; }
+ .socials a { display: inline-flex; min-height: 44px; align-items: center; }
+}

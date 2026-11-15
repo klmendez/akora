@@ -53,3 +53,12 @@
     font-size: 1.8rem;
   }
 }
+
+@media (max-width: 900px) {
+ .process { padding-bottom: 32px; } .step { display: block; padding: 20px 0; }
+ .number { display: block; font-size: 1.4rem; margin-bottom: 18px; }
+ .stepTitle { font-size: 1.2rem; } .stepText { font-size: .88rem; line-height: 1.7; }
+ .process :global(.section-head) { text-align: left; }
+ .process :global(.section-title) { max-width: none; }
+ .process :global(.section-lead) { margin-top: 14px; font-size: .88rem; }
+}

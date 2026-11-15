@@ -218,3 +218,23 @@
   .serviceItem:first-child, .serviceItem:nth-child(2), .serviceItem:nth-child(3), .serviceItem:nth-child(4) { min-height: 245px; padding: 20px 0 90px; }
 }
 @media (prefers-reduced-motion: reduce) { .projectShowcase .project { animation: none; } }
+
+@media (max-width: 900px) {
+ .projects, .process, .testimonial { padding: 28px 0; }
+ .projectLayout, .processLayout, .testimonialLayout { gap: 18px; }
+ .sectionTitle { font-size: 1.5rem; } .sectionIntro .copy, .testimonial .copy { display: none; }
+ .textLink { min-height: 44px; margin-top: 8px; font-size: .8rem; }
+ .projectShowcase .projectImage { max-height: 210px; }
+ .projectShowcase .project h3 { font-size: 1.05rem; margin-top: 10px; }
+ .projectShowcase .project p { font-size: .78rem; }
+ .projectControls { gap: 6px; margin-top: 10px; } .projectControls button { min-height: 44px; }
+ .steps { grid-auto-columns: 205px; padding-top: 15px; }
+ .step { min-height: 0; padding: 18px 6px 4px; } .step > svg { width: 21px; margin: 4px 0 10px; }
+ .step h3 { font-size: .95rem; } .step p { font-size: .83rem; line-height: 1.6; }
+ .processLayout > div { min-width: 0; }
+ .testimonialLayout .sectionTitle { max-width: 100%; }
+ .cta { padding: 16px 0; } .ctaInner { gap: 12px; padding: 22px 18px; border-radius: 0; }
+ .ctaInner p, .ctaInner > div > span { display: none; }
+ .ctaInner h2 { font-size: 1.25rem; line-height: 1.25; }
+ .ctaInner > a { min-height: 44px; font-size: .8rem; }
+}

@@ -1,3 +1,4 @@
+import ResponsiveText from '../ResponsiveText'
 import { Link } from 'react-router-dom'
 import Reveal from '../Reveal/Reveal'
 import logo from '../../assets/akora-logo-official.svg'
@@ -10,9 +11,9 @@ function Hero() {
       <div className={`container ${styles.grid}`}>
         <Reveal className={styles.copy}>
           <span className="eyebrow">AKORA 212 / DIGITAL LAB</span>
-          <h1 className={styles.title}>Tu negocio tiene potencial. <span className={styles.titleGold}>Nosotras lo llevamos al mundo digital.</span></h1>
+          <h1 className={styles.title}><ResponsiveText short="Impulsamos tu negocio digital.">Tu negocio tiene potencial. <span className={styles.titleGold}>Nosotras lo llevamos al mundo digital.</span></ResponsiveText></h1>
           <p className={styles.lead}>
-            Diseñamos marcas, desarrollamos experiencias digitales y creamos soluciones que ayudan a los negocios a crecer.
+            <ResponsiveText short="Diseño, contenido y tecnología para crecer.">Diseñamos marcas, desarrollamos experiencias digitales y creamos soluciones que ayudan a los negocios a crecer.</ResponsiveText>
           </p>
           <div className={styles.actions}>
             <Link to="/contacto" className="btn btn-gold">Cuéntanos tu proyecto</Link>

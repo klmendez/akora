@@ -148,3 +148,10 @@
 }
 
 @media (max-width: 1100px) { .nav { visibility: hidden; } .nav.open { visibility: visible; } }
+
+@media (max-width: 900px) {
+ .bar { padding: 10px 18px; } .logoImg { height: 48px; }
+ .nav { top: 68px; } .nav.open { max-height: calc(100dvh - 68px); }
+ .nav .navLink { padding: 12px 18px; min-height: 44px; }
+ .menuToggle { padding: 10px; } .header.scrolled { box-shadow: 0 4px 16px #06182c0c; }
+}

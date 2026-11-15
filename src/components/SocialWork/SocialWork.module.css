@@ -26,3 +26,16 @@
 
 .video { display: block; width: 100%; aspect-ratio: 9 / 16; max-height: 760px; object-fit: contain; background: #06182c; }
 .video:focus-visible { outline: 2px solid #bc8b49; outline-offset: 4px; }
+
+@media (max-width: 900px) {
+ .section { padding: 24px 0 32px; } .layout { gap: 20px; }
+ .copy h2 { font-size: 1.6rem; } .copy > p { display: none; }
+ .eyebrow { font-size: .65rem; margin-bottom: 12px; }
+ .selector { grid-auto-columns: 180px; margin-top: 18px; }
+ .selector button { gap: 10px; padding: 12px 0; font-size: .85rem; min-height: 64px; }
+ .selector small { font-size: .67rem; }
+ .contact { margin-top: 6px; font-size: .78rem; min-height: 44px; }
+ .viewer { max-width: min(100%, 360px); }
+ .video { max-height: 68svh; max-width: calc(68svh * 9 / 16); margin-inline: auto; }
+ .viewerHeading { padding-bottom: 10px; } .note { font-size: .72rem; }
+}

@@ -33,3 +33,15 @@
 .caseStudy dt { color: #d9b47f; font-size: .72rem; text-transform: uppercase; letter-spacing: .08em; margin: 18px 0 8px; }
 .caseStudy dd { color: var(--color-text-muted); font-size: .88rem; line-height: 1.9; margin-bottom: 20px; }
 .caseStudy a { margin: 0 18px 20px 0; }
+
+@media (max-width: 900px) {
+ .projects { padding: 26px 0 32px; } .galleryIntro { margin-bottom: 18px; }
+ .galleryIntro > span { font-size: 1.1rem; } .galleryIntro p { display: none; }
+ .filters { flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto; gap: 8px; padding-bottom: 8px; margin-bottom: 18px; }
+ .filterBtn { flex-shrink: 0; min-height: 44px; padding: 9px 13px; font-size: .8rem; }
+ .projectRow, .grid > :nth-child(even) .projectRow { padding: 8px 0 18px; gap: 16px; grid-template-columns: minmax(0, 1fr); grid-template-areas: 'media' 'content'; align-items: start; border: 0; }
+ .body { gap: 10px; } .category { font-size: .65rem; line-height: 1.5; }
+ .title { font-size: 1.3rem; } .caseStudy summary { padding: 13px 0; font-size: .83rem; }
+ .caseStudy dd { font-size: .84rem; line-height: 1.7; }
+ .linkBtn { min-height: 44px; font-size: .82rem; }
+}

@@ -26,3 +26,11 @@
 @media (max-width: 800px) { .stage { height: 350px; } }
 @media (max-width: 450px) { .stage { height: 300px; } .thumbnails { gap: 8px; } .thumbnails img { height: 44px; } .modalHeader { padding: 14px; } .fullImage { padding: 10px; } }
 @media (prefers-reduced-motion: reduce) { .thumbnails button { transition: none; } }
+
+@media (max-width: 900px) {
+ .stage { height: 210px; } .caption { gap: 8px; margin-bottom: 8px; font-size: .65rem; }
+ .caption button { min-height: 44px; font-size: .72rem; }
+ .thumbnails { margin-top: 10px; gap: 7px; } .thumbnails img { height: 34px; }
+ .thumbnails button { padding-bottom: 6px; min-height: 44px; }
+ .thumbnails span { font-size: .6rem; } .modalControls { gap: 16px; }
+}

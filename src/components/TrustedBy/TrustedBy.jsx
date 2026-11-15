@@ -54,6 +54,7 @@ function TrustedBy() {
             </div>
           </Reveal>
           <div className={styles.controls}>
+            <span className={`${styles.counter} mobile-copy`}>{currentIndex + 1} / {CLIENTS.length}</span>
             <button type="button" onClick={() => setCurrentIndex(prev => (prev - 1 + CLIENTS.length) % CLIENTS.length)} className={styles.navButton} aria-label="Anterior">Anterior</button>
             <div className={styles.dots}>
               {CLIENTS.map((item, index) => <button type="button" key={item.name} onClick={() => setCurrentIndex(index)} className={`${styles.dot} ${index === currentIndex ? styles.activeDot : ''}`} aria-label={`Mostrar ${item.name}`} aria-pressed={index === currentIndex} />)}

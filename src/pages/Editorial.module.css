@@ -20,6 +20,29 @@
 .secondary { padding-top: 50px; border-top: 1px solid #c7cbd0; margin-top: 50px; }
 .secondary p { max-width: 700px; color: #526170; margin: 18px 0; }
 .secondary summary { cursor: pointer; padding: 15px 0; font-weight: 600; }
-@media(max-width: 700px) { .page { padding-top: 135px; } .intro { margin-bottom: 42px; } .row { grid-template-columns: 30px 1fr; gap: 18px; padding: 32px 0; } .row > div:last-child { grid-column: 2; } .split, .example { grid-template-columns: 1fr; gap: 30px; } .split { padding: 40px 0; } }
+@media(max-width: 900px) { .page { padding-top: 135px; } .intro { margin-bottom: 42px; } .row { grid-template-columns: 30px 1fr; gap: 18px; padding: 32px 0; } .row > div:last-child { grid-column: 2; } .split, .example { grid-template-columns: 1fr; gap: 30px; } .split { padding: 40px 0; } }
 
 .serviceLabel { margin-top: 35px; }
+
+@media (max-width: 900px) {
+ .page { padding: 100px 0 30px; } .intro { margin-bottom: 24px; }
+ .intro h1 { font-size: clamp(1.8rem, 7.5vw, 2.3rem); }
+ .intro p { margin-top: 14px; font-size: .9rem; line-height: 1.65; }
+ .actions { gap: 10px; margin-top: 20px; } .actions > a { min-height: 44px; }
+ .actions :global(.btn) { width: auto; }
+ .row { display: block; padding: 22px 0 14px; border-bottom: 0; }
+ .row h2 { font-size: 1.45rem; margin: 6px 0 16px; }
+ .row :global(.eyebrow) { margin-top: 14px; }
+ .row .textLink { font-size: .8rem; min-height: 44px; }
+ .serviceLabel { margin-top: 20px; }
+ .split { border: 0; padding: 12px 0; gap: 20px; }
+ .split h2 { font-size: 1.25rem; margin-bottom: 12px; }
+ .split p { font-size: .86rem; line-height: 1.65; margin-bottom: 14px; }
+ .split > div:first-child p:last-child { display: none; }
+ .deliverables li { font-size: .85rem; padding: 12px 0; }
+ .example { padding: 25px 0 0; gap: 18px; }
+ .example img { max-height: 190px; object-fit: contain; object-position: left; }
+ .example h2 { font-size: 1.35rem; margin-bottom: 8px; }
+ .example p { display: none; } .textLink { font-size: .8rem; min-height: 44px; }
+ .secondary { margin-top: 24px; padding-top: 12px; } .secondary summary { font-size: .82rem; }
+}

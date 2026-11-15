@@ -223,3 +223,41 @@ h1, h2, h3, h4 {
     width: 100%;
   }
 }
+
+.mobile-copy, .mobile-rail-hint { display: none; }
+.mobile-details > summary { display: none; }
+.mobile-details { min-width: 0; }
+@media (max-width: 900px) {
+  :root { --section-padding: 32px; }
+  .container { padding-left: 18px; padding-right: 18px; }
+  .page-top { padding-top: 100px !important; }
+  .desktop-copy, .desktop-only { display: none !important; }
+  .mobile-copy { display: inline; }
+  .section-title { font-size: 1.75rem; line-height: 1.14; }
+  .section-lead { font-size: .88rem; line-height: 1.6; }
+  .section-head { margin-bottom: 24px; }
+  .eyebrow { font-size: .65rem; margin-bottom: 12px; }
+  .btn { min-height: 44px; padding: 11px 16px; font-size: .82rem; white-space: normal; }
+  .mobile-rail-hint { display: block; margin: 0 0 12px; font-size: .72rem; opacity: .75; }
+  .mobile-rail {
+    display: grid !important; grid-auto-flow: column !important;
+    grid-template-columns: none !important; grid-template-rows: auto !important;
+    grid-auto-columns: calc(100% - 28px); gap: 18px !important;
+    min-width: 0; max-width: 100%; overflow-x: auto; overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory; scroll-padding-inline: 0;
+    align-items: start; padding-bottom: 14px; scrollbar-width: thin;
+    scrollbar-color: #bc8b49 transparent;
+  }
+  .mobile-rail > * { min-width: 0; scroll-snap-align: start; }
+  .mobile-rail > .reveal { opacity: 1; transform: none; filter: none; }
+  .mobile-rail:focus-visible { outline: 2px solid #bc8b49; outline-offset: 3px; }
+  .mobile-details { border-top: 1px solid #bc8b4940; margin-top: 12px; }
+  .mobile-details > summary { display: block; cursor: pointer; padding: 13px 0; font-size: .82rem; font-weight: 500; }
+  .mobile-details > summary::-webkit-details-marker { display: none; }
+  .mobile-details > summary::after { content: '+'; float: right; margin-left: 12px; }
+  .mobile-details[open] > summary::after { content: '−'; }
+  .mobile-details > div { padding-bottom: 12px; }
+  .mobile-details p { font-size: .86rem; line-height: 1.65; }
+}
+
+@media (max-width: 900px) { .reveal { opacity: 1; transform: none; filter: none; } }

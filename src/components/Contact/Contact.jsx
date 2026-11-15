@@ -1,3 +1,5 @@
+import ResponsiveText from '../ResponsiveText'
+import MobileDetails from '../MobileDetails'
 import { useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { BOOST_SERVICE } from '../SocialBoost/SocialBoost'
@@ -95,7 +97,7 @@ function Contact() {
         <div className={styles.grid}>
           <Reveal className={styles.info}>
             <span className="eyebrow">Contacto</span>
-            <h1 className="section-title">Toda gran idea empieza con una conversación.</h1>
+            <h1 className="section-title"><ResponsiveText short="Hablemos de tu idea.">Toda gran idea empieza con una conversación.</ResponsiveText></h1>
             <p className="section-lead">
               Cuéntanos qué tienes en mente y conversemos sobre cómo hacerlo realidad.
             </p>
@@ -142,7 +144,7 @@ function Contact() {
           </Reveal>
 
           <Reveal delay={120}>
-            <form className={styles.form} onSubmit={handleSubmit}>
+            <form className={styles.form} onSubmit={handleSubmit} onInvalid={event => { const details = event.target.closest("details"); if (details) details.open = true }}>
               <p className={styles.full}>Al continuar se abrirá WhatsApp con tu idea lista para enviar.{form.plan && <><br />Plan de interés: <strong>{form.plan}</strong></>}</p>
               <div className={styles.field}>
                 <label htmlFor="name">Nombre</label>
@@ -170,6 +172,28 @@ function Contact() {
               </div>
 
               <div className={styles.field}>
+                <label htmlFor="service">¿Qué necesitas?</label>
+                <select id="service" name="service" value={form.service} onChange={handleChange}>
+                  {SERVICE_OPTIONS.map((option) => (
+                    <option key={option} value={option}>{option}</option>
+                  ))}
+                </select>
+              </div>
+
+              <div className={`${styles.field} ${styles.full}`}>
+                <label htmlFor="message">Cuéntanos tu idea</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  value={form.message}
+                  onChange={handleChange}
+                  placeholder="Cuéntanos brevemente qué necesitas"
+                />
+              </div>
+
+              <MobileDetails summary="Más datos (opcional)" className={styles.full}><div className={styles.optionalFields}>
+              <div className={styles.field}>
                 <label htmlFor="email">Correo (opcional)</label>
                 <input
                   id="email"
@@ -194,15 +218,6 @@ function Contact() {
               </div>
 
               <div className={styles.field}>
-                <label htmlFor="service">¿Qué necesitas?</label>
-                <select id="service" name="service" value={form.service} onChange={handleChange}>
-                  {SERVICE_OPTIONS.map((option) => (
-                    <option key={option} value={option}>{option}</option>
-                  ))}
-                </select>
-              </div>
-
-              <div className={styles.field}>
                 <label htmlFor="budget">Presupuesto aproximado</label>
                 <select id="budget" name="budget" value={form.budget} onChange={handleChange}>
                   {BUDGET_OPTIONS.map((option) => (
@@ -211,17 +226,7 @@ function Contact() {
                 </select>
               </div>
 
-              <div className={`${styles.field} ${styles.full}`}>
-                <label htmlFor="message">Cuéntanos tu idea</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  required
-                  value={form.message}
-                  onChange={handleChange}
-                  placeholder="Cuéntanos brevemente qué necesitas"
-                />
-              </div>
+              </div></MobileDetails>
 
               <div className={styles.submitRow}>
                 <button type="submit" className="btn btn-gold">Conversar por WhatsApp</button>

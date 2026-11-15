@@ -1,3 +1,4 @@
+import MobileDetails from '../MobileDetails'
 import { Camera, Video } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import Reveal from '../Reveal/Reveal'
@@ -24,13 +25,13 @@ function SocialBoost() {
             <span className={styles.label}><Video size={18} /> Plan de impulso en redes</span>
             <div className={styles.price}>$500.000 <span>COP / paquete</span></div>
             <p className={styles.quantity}>4 videos para dar el primer paso</p>
-            <ul>
+            <MobileDetails summary="Qué incluye el paquete"><ul>
               <li><Camera size={19} /> Grabación con los dueños del negocio</li>
               <li><Video size={19} /> Contenido para presentar tu marca en redes</li>
               <li> Un inicio para tu presencia digital</li>
-            </ul>
+            </ul></MobileDetails>
             <Link to={BOOST_CONTACT} className="btn btn-gold">Quiero impulsar mi negocio </Link>
-            <p className={styles.note}>Antes de empezar acordamos las ideas, ubicación de grabación, duración y formato de los videos, revisiones y fechas de entrega. Si necesitas publicación o pauta, su alcance e inversión se detallan en la propuesta.</p>
+            <MobileDetails summary="Grabación, revisiones y entregas"><p className={styles.note}>Antes de empezar acordamos las ideas, ubicación de grabación, duración y formato de los videos, revisiones y fechas de entrega. Si necesitas publicación o pauta, su alcance e inversión se detallan en la propuesta.</p></MobileDetails>
           </div>
         </Reveal>
       </div>
