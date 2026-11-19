@@ -27,14 +27,10 @@ jobs:
           node-version: 24
           cache: npm
       - run: npm ci
-      - name: Configure Pages
-        id: pages
-        uses: actions/configure-pages@v5
-      - name: Build site for configured domain
-        env:
-          PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+      - uses: actions/configure-pages@v5
+      - name: Build site for byakora.com at root
         run: |
-          npm run build -- --base="${PAGES_BASE_PATH%/}/"
+          npm run build -- --base=/
           node scripts/build-pages.mjs
       - uses: actions/upload-pages-artifact@v3
         with:
