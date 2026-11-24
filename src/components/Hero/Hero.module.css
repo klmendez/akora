@@ -20,8 +20,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  height: 110px;
-  background: linear-gradient(transparent, rgba(188, 139, 73, .07));
+  height: clamp(60px, 12vw, 110px);
+  background: linear-gradient(180deg, rgba(251, 250, 247, 0), #fbfaf7);
   pointer-events: none;
 }
 
@@ -196,14 +196,93 @@
 
 .titleGold { display: block; }
 @media (max-width: 900px) {
- .hero { padding: 90px 0 30px; min-height: 0; }
- .grid { gap: 18px; } .visual { margin: 0; }
- .logoImg { max-width: 130px; animation: none; }
- .visual::before { width: 140px; height: 140px; }
- .visual::after { width: 105px; height: 105px; }
- .title { min-height: 0; font-size: clamp(1.8rem, 7.5vw, 2.25rem); line-height: 1.12; }
- .lead { margin-top: 14px; font-size: .9rem; line-height: 1.6; }
- .actions { margin-top: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
- .actions :global(.btn) { padding: 10px 8px; font-size: .78rem; }
- .disciplines { display: none; } .copy :global(.eyebrow) { display: none; }
+ .hero { padding: 100px 0 32px; min-height: 0; }
+ .grid { gap: 22px; }
+ .visual { margin: 0; }
+ .logoImg { max-width: min(58vw, 245px); animation: logoFloat 6s ease-in-out infinite; }
+ .visual::before { width: min(78vw, 330px); height: min(78vw, 330px); }
+ .visual::after { width: min(62vw, 260px); height: min(62vw, 260px); }
+ .title { min-height: 0; max-width: 16ch; margin-inline: auto; font-size: clamp(2rem, 8vw, 2.8rem); line-height: 1.04; }
+ .lead { max-width: 34ch; margin: 13px auto 0; font-size: .96rem; line-height: 1.55; }
+ .actions { width: min(100%, 360px); margin: 20px auto 0; display: grid; grid-template-columns: 1fr; gap: 9px; }
+ .actions :global(.btn) { min-height: 48px; padding: 11px 14px; font-size: .84rem; }
+ .disciplines { display: block; margin-top: 20px; font-size: .62rem; letter-spacing: .12em; }
+ .copy :global(.eyebrow) { display: inline-flex; margin-bottom: 12px; font-size: .59rem; }
 }
+
+@media (max-width: 420px) {
+ .hero { min-height: 0; padding: 94px 0 34px; }
+ .grid { gap: 16px; }
+ .logoImg { max-width: min(58vw, 220px); }
+ .title { font-size: clamp(1.8rem, 8.3vw, 2.25rem); }
+ .lead { font-size: .88rem; }
+}
+
+.hero .copy :global(.eyebrow) { display: none; }
+@media (max-width: 900px) {
+  .lead { line-height: 1.45; }
+}
+
+/* Letters occupy their final space so typing never moves the buttons. */
+.word { white-space: nowrap; }
+@media (max-width: 900px) and (prefers-reduced-motion: no-preference) {
+  .letter { opacity: 0; animation: typeLetter 1ms linear var(--letter-delay) forwards; }
+  .lead { animation: heroArrival 550ms ease-out 350ms both; }
+  .actions { animation: heroArrival 550ms ease-out 500ms both; }
+}
+@keyframes typeLetter { to { opacity: 1; } }
+@keyframes heroArrival {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* The welcome arrives in place, without shifting the rest of the hero. */
+.title { min-height: 0; font-size: clamp(2.25rem, 4vw, 3.4rem); }
+.greeting { display: block; color: var(--color-gold); margin-bottom: .12em; }
+.welcome { display: block; }
+.titleGold { display: inline; }
+@media (prefers-reduced-motion: no-preference) {
+  .greeting { animation: welcomeArrival 700ms cubic-bezier(.2,.75,.25,1) 100ms both; }
+  .welcome { animation: welcomeArrival 800ms cubic-bezier(.2,.75,.25,1) 280ms both; }
+}
+@keyframes welcomeArrival {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (max-width: 900px) {
+  .title { max-width: 18ch; font-size: clamp(1.9rem, 7vw, 2.7rem); }
+}
+
+/* Keep the welcome within the first mobile viewport when space allows. */
+@media (max-width: 900px) {
+  .hero { min-height: 100svh; padding: 78px 0 20px; }
+  .grid { gap: clamp(8px, 2vh, 18px); }
+  .logoImg { max-width: min(45vw, 19svh, 190px); }
+  .visual::before { width: min(55vw, 23svh, 230px); height: min(55vw, 23svh, 230px); }
+  .visual::after { width: min(44vw, 18svh, 180px); height: min(44vw, 18svh, 180px); }
+  .title { font-size: clamp(1.7rem, 6.5vw, 2.35rem); }
+  .lead { margin-top: 10px; }
+  .actions { margin-top: 16px; gap: 8px; }
+  .disciplines { margin-top: 14px; }
+}
+
+/* Give the greeting the emphasis and keep the brand name together. */
+.greeting { font-size: clamp(3.5rem, 6.5vw, 5.5rem); line-height: 1; }
+.welcome { font-size: clamp(1.55rem, 2.8vw, 2.35rem); line-height: 1.2; }
+.titleGold { white-space: nowrap; }
+@media (max-width: 900px) {
+  .title { max-width: 100%; }
+  .greeting { font-size: clamp(3.2rem, 13vw, 4.5rem); }
+  .welcome { max-width: 25ch; margin-inline: auto; font-size: clamp(1.25rem, 5vw, 1.65rem); line-height: 1.22; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .visual { animation: heroVisualIn 1s cubic-bezier(.2,.75,.25,1) both; }
+  .lead { animation: heroDetailsIn 700ms ease-out 450ms both; }
+  .actions { animation: heroDetailsIn 700ms ease-out 600ms both; }
+  .disciplines { animation: heroDetailsIn 700ms ease-out 750ms both; }
+  .glowLine { animation: heroLight 2s ease-out both; }
+}
+@keyframes heroVisualIn { from { opacity: 0; transform: scale(.9); } to { opacity: 1; transform: scale(1); } }
+@keyframes heroDetailsIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes heroLight { from { opacity: 0; } to { opacity: 1; } }

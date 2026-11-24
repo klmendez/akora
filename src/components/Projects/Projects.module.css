@@ -45,3 +45,9 @@
  .caseStudy dd { font-size: .84rem; line-height: 1.7; }
  .linkBtn { min-height: 44px; font-size: .82rem; }
 }
+
+@media (max-width: 900px) {
+  .body { align-items: center; text-align: center; }
+  .actionsRow { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 18px; }
+  .galleryIntro { text-align: center; }
+}

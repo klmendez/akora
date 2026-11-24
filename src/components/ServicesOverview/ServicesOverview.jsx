@@ -1,6 +1,6 @@
 import ResponsiveText from '../ResponsiveText'
 import { SERVICES } from '../../data/services'
-import { Blocks, Braces, Compass, Workflow, Camera } from 'lucide-react'
+import { Blocks, Braces, Compass, Workflow, Camera, Plus } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import Reveal from '../Reveal/Reveal'
 import styles from './ServicesOverview.module.css'
@@ -13,33 +13,31 @@ function ServicesOverview() {
       <div className="container">
         <Reveal className={styles.intro}>
           <div>
-            <span className={styles.eyebrow}>Nuestros servicios</span>
+            <span className={styles.sectionLabel}>Lo que hacemos</span>
             <h2 id="home-services-title">Soluciones digitales<br />para negocios reales<span>.</span></h2>
-          </div>
-          <div className={styles.summary}>
-            <p>Contenido que conecta, marcas con identidad y tecnología que simplifica. Diseñamos la solución que tu negocio necesita para avanzar.</p>
-            <Link to="/servicios">Conoce todos nuestros servicios </Link>
+            <p className={styles.introText}>Diseñamos, desarrollamos y conectamos tecnología con las necesidades de tu negocio.</p>
           </div>
         </Reveal>
 
-        <p className={styles.scrollHint}>Desliza para explorar </p>
-        <div className={styles.row} tabIndex={0} role="region" aria-label="Nuestros cinco servicios">
-          {SERVICES.map((service, index) => (
-            <div key={service.title} className={styles.service}>
-              <article>
-                <div className={styles.serviceTop}>
-                  <span>0{index + 1}</span>
-                  {(() => { const Icon = ICONS[index]; return <Icon size={28} strokeWidth={1.3} aria-hidden="true" /> })()}
+        <Reveal className={styles.accordion} delay={100}>
+          {SERVICES.map((service, index) => {
+            const Icon = ICONS[index]
+            return (
+              <details className={styles.item} name="home-services" key={service.slug}>
+                <summary className={styles.itemSummary}>
+                  <span className={styles.itemIcon}><Icon size={22} strokeWidth={1.5} aria-hidden="true" /></span>
+                  <span>{service.title}</span>
+                  <Plus className={styles.expandIcon} size={20} aria-hidden="true" />
+                </summary>
+                <div className={styles.itemContent}>
+                  <p><ResponsiveText short={service.short}>{service.text}</ResponsiveText></p>
+                  <Link to={`/servicios/${service.slug}`}>Conocer servicio</Link>
                 </div>
-                <h3><Link to={`/servicios/${service.slug}`}>{service.title}</Link></h3>
-                <p><ResponsiveText short={service.short}>{service.text}</ResponsiveText></p>
-                <ul aria-label={`Soluciones de ${service.title}`}>
-                  {service.details.map(detail => <li key={detail}>{detail}</li>)}
-                </ul>
-              </article>
-            </div>
-          ))}
-        </div>
+              </details>
+            )
+          })}
+        </Reveal>
+        <div className={styles.allServices}><Link to="/servicios">Explorar todos los servicios</Link></div>
       </div>
     </section>
   )

@@ -1,3 +1,34 @@
+.home {
+  background: linear-gradient(180deg, #fbfaf7 0%, #fbfaf7 20%, #f5f0e7 40%, #eeeae2 60%, #f6f3ed 80%, #fbfaf7 100%);
+}
+
+.home .eyebrow { display: none; }
+.home .sectionTitle { text-align: center; line-height: 1.12; }
+.home .sectionIntro { text-align: center; }
+.home .copy, .home .step p { line-height: 1.45; }
+
+@media (max-width: 900px) {
+  .home .projects, .home .process, .home .testimonial { padding: 20px 0; }
+  .home .sectionIntro { max-width: none; }
+  .home .projectLayout, .home .processLayout, .home .testimonialLayout { gap: 12px; }
+  .home .sectionTitle { font-size: 1.35rem; }
+  .home .textLink { margin-top: 3px; }
+  .home .testimonialLayout { text-align: center; }
+  .home .ctaInner { align-items: center; text-align: center; }
+}
+
+/* A continuous canvas lets the sections blend without extra spacer blocks. */
+.home > section {
+  background-color: transparent;
+}
+
+.home > .projects,
+.home > .process,
+.home > .testimonial,
+.home > .cta {
+  background: transparent;
+}
+
 .services,
 .projects {
   padding: 42px 0;
@@ -237,4 +268,41 @@
  .ctaInner p, .ctaInner > div > span { display: none; }
  .ctaInner h2 { font-size: 1.25rem; line-height: 1.25; }
  .ctaInner > a { min-height: 44px; font-size: .8rem; }
+}
+
+@media (max-width: 900px) {
+  .home .projectShowcase { width: 100%; max-width: 520px; margin-inline: auto; }
+  .home .projectShowcase .project { text-align: center; }
+  .home .projectShowcase .projectImage { width: 100%; margin-inline: auto; }
+  .home .projectControls { justify-content: center; flex-wrap: wrap; gap: 4px 10px; }
+  .home .projectControls button:last-child { margin-left: 0; }
+  .home .projectControls button { min-width: 58px; }
+  .home .steps { grid-auto-columns: 100%; }
+  .home .step { text-align: center; padding-inline: 12px; }
+  .home .step > svg { margin-inline: auto; }
+  .home .stepNumber { left: 50%; transform: translateX(-50%); }
+  .home :global(.mobile-rail-hint) { text-align: center; }
+}
+
+.darkButton, .ctaInner > a { border-radius: 999px; }
+
+/* Compact vertical process with one readable row per step. */
+.home .steps { display: grid; grid-template-columns: 1fr; gap: 0; padding: 0; }
+.home .step { display: grid; grid-template-columns: 30px 24px minmax(0, 1fr); align-items: center; column-gap: 10px; min-height: 0; padding: 9px 0; text-align: left; border-top: 1px solid rgba(188,139,73,.3); }
+.home .stepNumber { position: static; transform: none; width: 28px; height: 28px; }
+.home .step > svg { width: 20px; height: 20px; margin: 0; }
+.home .step h3 { font-size: .86rem; }
+.home .step p { grid-column: 3; margin: 2px 0 0; font-size: .75rem; line-height: 1.35; }
+
+/* Section labels match the small gold label used above the services. */
+.home .eyebrow { display: flex; align-items: center; justify-content: center; gap: 8px; color: #b87820; font-size: .68rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.home .eyebrow::before { content: ''; width: 20px; height: 3px; border-radius: 3px; background: #d18a29; }
+
+.home > section#servicios { background: #f7f0e8; }
+
+@media (prefers-reduced-motion: no-preference) {
+ .home .projectImage img { transition: transform 600ms cubic-bezier(.2,.75,.25,1); }
+ .home .project:hover .projectImage img { transform: scale(1.035); }
+ .home .step { transition: background-color 240ms ease; }
+ .home .step:hover { background-color: rgba(188,139,73,.06); }
 }

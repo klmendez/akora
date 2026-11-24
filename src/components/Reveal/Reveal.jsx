@@ -7,6 +7,10 @@ function Reveal({ children, className = '', as: Tag = 'div', delay = 0 }) {
   useEffect(() => {
     const node = ref.current
     if (!node) return
+    if (!('IntersectionObserver' in window)) {
+      setVisible(true)
+      return
+    }
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -15,7 +19,7 @@ function Reveal({ children, className = '', as: Tag = 'div', delay = 0 }) {
           observer.unobserve(node)
         }
       },
-      { threshold: 0.15, rootMargin: '0px 0px -15% 0px' }
+      { threshold: 0.08, rootMargin: '0px 0px -24px 0px' }
     )
 
     observer.observe(node)

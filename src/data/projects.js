@@ -1,0 +1,29 @@
+import abpSegurosImg from '../assets/projects/abp-seguros.png'
+import barriosValenciaImg from '../assets/projects/barrios-valencia.png'
+import etnodesarrolloGuapiImg from '../assets/projects/etnodesarrollo-guapi.png'
+import alixsonValentinaImg from '../assets/projects/alixson-valentina.png'
+import laTemporadaImg from '../assets/projects/la-temporada.png'
+import laTubaImg from '../assets/projects/la-tuba.jpg'
+import mrOImg from '../assets/projects/mr-o.jpg'
+import modaImg from '../assets/projects/501.jpg'
+import guajuiImg from '../assets/projects/rio-guajui.jpg'
+import abpPortalImg from '../assets/projects/abp-portal.jpg'
+
+export const PROJECTS = [
+  { id: 'alixson-valentina', title: 'Alixson Valentina', category: 'Portafolio profesional', image: alixsonValentinaImg, url: 'https://alixsonvalentina.netlify.app/', description: 'Portafolio digital para presentar perfil, experiencia, colaboraciones y trabajos de una modelo y creadora UGC.', features: ['Presentación del perfil profesional', 'Galería de trabajos', 'Colaboraciones UGC', 'Canales de contacto'], technologies: ['React', 'Vite', 'CSS responsive'], investment: 'Desde $900.000 COP', filters: ['web'] },
+  { id: 'barrios-valencia', title: 'Barrios Valencia Abogados', category: 'Sitio web corporativo', image: barriosValenciaImg, url: 'https://www.barriosvalencia.com/', description: 'Sitio para una firma especializada en derecho pensional y laboral, diseñado para explicar sus servicios y facilitar consultas.', features: ['Servicios jurídicos', 'Casos de éxito', 'Perfil profesional', 'Agendamiento de consultas'], technologies: ['React', 'Vite', 'CSS responsive'], investment: 'Desde $900.000 COP', filters: ['web', 'contenido'] },
+  { id: 'la-tuba', title: 'La Tuba Gastrobar', category: 'Experiencia digital gastronómica', image: laTubaImg, url: 'https://latubagastrobar.netlify.app/', description: 'Presencia web para un gastrobar, con una experiencia visual que acerca a las personas a su propuesta y carta.', features: ['Presentación del gastrobar', 'Carta digital', 'Identidad de marca', 'Acceso desde celular'], technologies: ['React', 'Vite', 'CSS responsive'], investment: 'Desde $900.000 COP', filters: ['web', 'contenido'] },
+  { id: 'mr-o', title: 'Mr O. School', category: 'Sitio web educativo bilingüe', image: mrOImg, url: 'https://misteroschool.com/', description: 'Sitio en español e inglés para presentar programas, planes de estudio y el perfil del profesor.', features: ['Navegación en dos idiomas', 'Programas de inglés y español', 'Planes de estudio', 'Contacto por WhatsApp'], technologies: ['React', 'Vite', 'CSS responsive'], investment: 'Desde $900.000 COP', filters: ['web'] },
+  { id: '501', title: 'Almacén 501', category: 'Catálogo de moda urbana', image: modaImg, url: 'https://501m.netlify.app/', description: 'Catálogo adaptado a celulares para compradores al detal y al por mayor.', features: ['Búsqueda y filtros', 'Favoritos y vista rápida', 'Selección de cantidades', 'Consultas por WhatsApp'], technologies: ['React', 'Vite', 'CSS responsive'], investment: 'Desde $1.200.000 COP', filters: ['web', 'sistema', 'contenido'] },
+  { id: 'rio-guajui', title: 'Consejo Comunitario del Río Guajuí', category: 'Portal comunitario', image: guajuiImg, url: 'https://guajui.netlify.app/', description: 'Portal que representa la identidad del consejo comunitario y facilita conocer su territorio.', features: ['Identidad comunitaria', 'Información territorial', 'Diseño adaptable'], technologies: ['React', 'Vite', 'CSS responsive'], investment: 'Desde $900.000 COP', filters: ['web'] },
+  { id: 'abp-seguros', title: 'ABP Agencia de Seguros', category: 'Sitio web corporativo', image: abpSegurosImg, url: 'https://abpsegurosltda.com/', description: 'Web corporativa para presentar los servicios de la agencia y facilitar el contacto con sus asesores.', features: ['Presentación de servicios', 'Formularios de contacto', 'Acceso a asesores', 'Diseño adaptable'], technologies: ['React', 'Vite', 'CSS responsive'], investment: 'Desde $900.000 COP', filters: ['web'] },
+  { id: 'la-temporada', title: 'La Temporada', category: 'Tienda en línea', image: laTemporadaImg, url: 'https://la-temporada-eta.vercel.app/', description: 'Tienda de regalos y productos de temporada con un recorrido simple desde la selección hasta el pedido.', features: ['Catálogo por temporadas', 'Carrito de compras', 'Datos de entrega y pago', 'Registro de pedidos'], technologies: ['React', 'Vite', 'CSS responsive'], investment: 'Desde $1.200.000 COP', filters: ['web', 'sistema', 'automatizacion'] },
+  { id: 'etnodesarrollo-guapi', title: 'Planes de Etnodesarrollo de Guapi', category: 'Portal informativo', image: etnodesarrolloGuapiImg, url: 'https://planesdeetnodesarrolloguapi.com/', description: 'Plataforma para consultar los planes de etnodesarrollo de cinco consejos comunitarios de Guapi.', features: ['Consulta de planes', 'Información de cinco consejos', 'Contenido territorial', 'Navegación adaptable'], technologies: ['React', 'Vite', 'CSS responsive'], investment: 'Desde $900.000 COP', filters: ['web'] },
+  { id: 'abp-gestion', title: 'ABP · Portal de clientes', category: 'Plataforma de seguros', image: abpPortalImg, url: 'https://abpsegurosltda.com/#/login-clientes', description: 'Acceso digital para clientes, integrado con la presencia pública de la agencia.', features: ['Acceso para clientes', 'Portal conectado al sitio de ABP'], technologies: ['React', 'Aplicación web'], investment: 'Cotización según alcance', filters: ['sistema'] },
+]
+
+export const PROJECT_FILTERS = [
+  { id: 'todos', label: 'Todos' }, { id: 'web', label: 'Diseño web' },
+  { id: 'contenido', label: 'Contenido' }, { id: 'identidad', label: 'Identidad' },
+  { id: 'sistema', label: 'Software' }, { id: 'automatizacion', label: 'Automatización' },
+]

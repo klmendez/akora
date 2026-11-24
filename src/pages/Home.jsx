@@ -15,26 +15,13 @@ import modaImage from '../assets/projects/501.jpg'
 import guajuiImage from '../assets/projects/rio-guajui.jpg'
 import guapiImage from '../assets/projects/etnodesarrollo-guapi.png'
 import abpImage from '../assets/projects/abp-seguros.png'
-import abpPortalImage from '../assets/projects/abp-portal.jpg'
+import { PROJECTS } from '../data/projects'
 
 const STEPS = [
   { icon: Compass, title: 'Descubrimos', text: 'Entendemos tu negocio, tus objetivos y lo que necesitas.' },
   { icon: Lightbulb, title: 'Diseñamos', text: 'Definimos una estrategia y una propuesta a tu medida.' },
   { icon: Braces, title: 'Desarrollamos', text: 'Convertimos las ideas en una solución digital real.' },
   { icon: Rocket, title: 'Impulsamos', text: 'Te acompañamos en el lanzamiento y crecimiento.' },
-]
-
-const PROJECTS = [
-  { title: 'Barrios Valencia Abogados', category: 'Sitio web corporativo', image: barriosImage, href: 'https://www.barriosvalencia.com/' },
-  { title: 'La Tuba Gastrobar', category: 'Experiencia digital gastronómica', image: laTubaImage, href: 'https://latubagastrobar.netlify.app/' },
-  { title: 'Mr O. School', category: 'Sitio web educativo bilingüe', image: mrOImage, href: 'https://misteroschool.com/' },
-  { title: '501', category: 'Catálogo de moda urbana', image: modaImage, href: 'https://501m.netlify.app/' },
-  { title: 'Consejo Comunitario del Río Guajuí', category: 'Portal comunitario', image: guajuiImage, href: 'https://guajui.netlify.app/' },
-  { title: 'ABP Agencia de Seguros', category: 'Sitio web corporativo', image: abpImage, href: 'https://abpsegurosltda.com/' },
-  { title: 'La Temporada', category: 'Tienda en línea', image: temporadaImage, href: 'https://la-temporada-eta.vercel.app/' },
-  { title: 'Alixson Valentina', category: 'Portafolio profesional', image: alixsonImage, href: 'https://alixsonvalentina.netlify.app/' },
-  { title: 'Planes de Etnodesarrollo de Guapi', category: 'Sitio web informativo', image: guapiImage, href: 'https://planesdeetnodesarrolloguapi.com/' },
-  { title: 'ABP · Portal de clientes', category: 'Plataforma de seguros', image: abpPortalImage, href: 'https://abpsegurosltda.com/#/login-clientes' },
 ]
 
 function Home() {
@@ -48,7 +35,7 @@ function Home() {
   const project = PROJECTS[projectIndex]
 
   return (
-    <>
+    <div className={styles.home}>
       <Hero />
       <TrustedBy />
 
@@ -64,10 +51,10 @@ function Home() {
           </Reveal>
           <Reveal className={styles.projectShowcase}>
             <div aria-label="Proyectos destacados" aria-roledescription="carrusel">
-              <a key={project.title} className={styles.project} href={project.href} target="_blank" rel="noopener noreferrer">
+              <Link key={project.title} className={styles.project} to={`/proyectos/${project.id}`}>
                 <div className={styles.projectImage}><img src={project.image} alt={project.title} /></div>
                 <h3>{project.title}</h3><p>{project.category}</p>
-              </a>
+              </Link>
               <div className={styles.projectControls}>
                 <button type="button" onClick={() => setProjectIndex(index => (index - 1 + PROJECTS.length) % PROJECTS.length)} aria-label="Proyecto anterior">Anterior</button>
                 <span>{String(projectIndex + 1).padStart(2, '0')} / {PROJECTS.length}</span>
@@ -87,7 +74,7 @@ function Home() {
             <p className={styles.copy}>Un camino claro, colaborativo y enfocado en lo que realmente importa: tu crecimiento.</p>
             <Link className={styles.textLink} to="/proceso">Conoce nuestro proceso</Link>
           </Reveal>
-          <div><p className="mobile-rail-hint">Desliza para conocer las etapas</p><div className={`${styles.steps} mobile-rail`} tabIndex={0} role="region" aria-label="Etapas de trabajo">
+          <div><div className={styles.steps} role="region" aria-label="Etapas de trabajo">
             {STEPS.map((step, index) => (
               <Reveal key={step.title} delay={index * 70}>
                 <article className={styles.step}>
@@ -111,11 +98,11 @@ function Home() {
 
       <section className={styles.cta}>
         <div className={`container ${styles.ctaInner}`}>
-          <div><span>¿Tienes un proyecto en mente?</span><h2>Hablemos de lo que podemos construir juntos</h2><p>Cuéntanos tu idea y conversemos sobre cómo hacerla realidad.</p></div>
+          <div><span>Tu proyecto comienza aquí</span><h2>Hablemos de lo que podemos construir juntos</h2><p>Cuéntanos tu idea y conversemos sobre cómo hacerla realidad.</p></div>
           <Link to="/contacto">Hablemos de tu proyecto </Link>
         </div>
       </section>
-    </>
+    </div>
   )
 }
 

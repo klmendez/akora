@@ -13,6 +13,7 @@ import Planes from './pages/Planes'
 import ServicioDetalle from './pages/ServicioDetalle'
 import PageMeta from './components/PageMeta'
 import ConversionEvents from './components/ConversionEvents'
+import ProjectDetail from './pages/ProjectDetail'
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/servicios/:slug" element={<ServicioDetalle />} />
           <Route path="/planes" element={<Planes />} />
           <Route path="/proyectos" element={<Proyectos />} />
+          <Route path="/proyectos/:slug" element={<ProjectDetail />} />
           <Route path="/nosotras" element={<Nosotras />} />
           <Route path="/proceso" element={<Proceso />} />
           <Route path="/contacto" element={<Contacto />} />

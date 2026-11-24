@@ -11,7 +11,10 @@ function Hero() {
       <div className={`container ${styles.grid}`}>
         <Reveal className={styles.copy}>
           <span className="eyebrow">AKORA 212 / DIGITAL LAB</span>
-          <h1 className={styles.title}><ResponsiveText short="Impulsamos tu negocio digital.">Tu negocio tiene potencial. <span className={styles.titleGold}>Nosotras lo llevamos al mundo digital.</span></ResponsiveText></h1>
+          <h1 className={styles.title}>
+            <span className={styles.greeting}>Hola!</span>
+            <span className={styles.welcome}>Bienvenidos al portafolio de servicios de <span className={styles.titleGold}>Akora 21-2.</span></span>
+          </h1>
           <p className={styles.lead}>
             <ResponsiveText short="Diseño, contenido y tecnología para crecer.">Diseñamos marcas, desarrollamos experiencias digitales y creamos soluciones que ayudan a los negocios a crecer.</ResponsiveText>
           </p>

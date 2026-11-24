@@ -172,7 +172,7 @@ function Contact() {
               </div>
 
               <div className={styles.field}>
-                <label htmlFor="service">¿Qué necesitas?</label>
+                <label htmlFor="service">Qué necesitas</label>
                 <select id="service" name="service" value={form.service} onChange={handleChange}>
                   {SERVICE_OPTIONS.map((option) => (
                     <option key={option} value={option}>{option}</option>

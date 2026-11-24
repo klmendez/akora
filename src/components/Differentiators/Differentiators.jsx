@@ -32,7 +32,7 @@ function Differentiators() {
         <div className="section-head center">
           <Reveal>
             <span className="eyebrow">Diferenciales</span>
-            <h2 className="section-title">¿Por qué trabajar con AKORA 212?</h2>
+            <h2 className="section-title">Por qué trabajar con AKORA 212</h2>
           </Reveal>
         </div>
 
