@@ -155,3 +155,11 @@
  .nav .navLink { padding: 12px 18px; min-height: 44px; }
  .menuToggle { padding: 10px; } .header.scrolled { box-shadow: 0 4px 16px #06182c0c; }
 }
+
+/* Crop the transparent margins of the supplied horizontal logo. */
+.logo { width: 210px; height: 66px; overflow: hidden; flex-shrink: 0; }
+.logoImg { width: 100%; height: auto; }
+@media (max-width: 900px) {
+  .logo { width: 160px; height: 48px; }
+  .logoImg { width: 100%; height: auto; }
+}

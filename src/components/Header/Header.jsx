@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
-import logo from '../../assets/akora-logo-official.svg'
+import logo from '../../assets/akora-navbar.png'
 import styles from './Header.module.css'
 
 const LINKS = [
@@ -31,7 +31,7 @@ function Header() {
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
       <div className={`container ${styles.bar}`}>
         <Link to="/" className={styles.logo} onClick={handleLinkClick}>
-          <img src={logo} alt="AKORA 212 · Digital Lab" className={styles.logoImg} />
+          <img src={logo} alt="AKORA 21-2" className={styles.logoImg} />
         </Link>
 
         <nav className={`${styles.nav} ${open ? styles.open : ''}`}>
